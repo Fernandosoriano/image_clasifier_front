@@ -1,0 +1,15 @@
+
+<div class="dark-background">
+  <div class="container">
+    <h1 class="title">Upload an Image</h1>
+    <form (submit)="onSubmit($event)" enctype="multipart/form-data" class="upload-form">
+      <input type="file" (change)="onFileChange($event)" accept="image/*" required class="file-input">
+      <button type="submit" class="upload-button">Upload Image</button>
+    </form>
+
+    @if (responseMessage) {
+        {{ responseMessage }}
+    }
+  </div>
+</div>
+
